@@ -42,7 +42,7 @@ func printMsg(m *nats.Msg, i int) {
 }
 
 func main() {
-	var urls = flag.String("s", nats.DefaultURL, "The nats server URLs (separated by comma)")
+	var urls = flag.String("s", "nats://172.16.161.84:5221,nats://127.0.0.1:5221", "The nats server URLs (separated by comma)")
 	var userCreds = flag.String("creds", "", "User Credentials File")
 	var showTime = flag.Bool("t", false, "Display timestamps")
 	var showHelp = flag.Bool("h", false, "Show help message")
